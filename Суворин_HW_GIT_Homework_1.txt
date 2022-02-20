@@ -194,9 +194,22 @@ JSON
  28. Отправить изменения на внешний репозиторий.=== 1)git add new.xml
                                                     2)git commit -m "editing xml-file"
                                                     3)git push
- 29. Создать файл preferences.xml
- 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
- 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+ 29. Создать файл preferences.xml=== cat > preferences.xml
+				    
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.=== 1)vim preferences.xml
+			    2)<?xml version="1.0" encoding="UTF-8"?>
+					<favorite_things>
+        						<favorite_movie>a knight's tale</favorite_movie>
+        						<favorite_series>game_of_thrones</favorite_series>
+        						<favorite_food>fried fish</favorite_food>
+        						<favorite_time_of_the_year>spring and summer</favorite_time_of_the_year>
+        						<the_country_which_i_want_to_visit>Croatia and Czech</the_country_which_i_want_to_visit>
+					</favorite_things>	
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML===
+					1)vim skills.xml
+					2)
+
  32. Сделать коммит в одну строку.
  33. Отправить сразу 2 файла на внешний репозиторий.
  34. На веб интерфейсе создать файл bug_report.xml.
