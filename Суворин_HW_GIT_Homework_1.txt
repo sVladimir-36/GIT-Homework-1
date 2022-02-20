@@ -28,17 +28,138 @@ JSON
                                                       To https://github.com/sVladimir-36/JSON.git
                                                       6ee95a8..a0d7eb9  main -> main
  
- 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON. ===
- 11. Отправить изменения на внешний репозиторий.
- 12. Создать файл preferences.json
- 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
- 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
- 15. Отправить сразу 2 файла на внешний репозиторий.
- 16. На веб интерфейсе создать файл bug_report.json.
- 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
- 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 20. Синхронизировать внешний и локальный репозиторий JSON
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON. === vim new.json
+                  {
+                  "surname": "suvorin",
+                  "name": "vladimir",
+                  "patronymic": "alexandrovich",
+                  "age": 32,
+                  "pets quantity":"2",
+                  "desired salary": 70000
+                   }
+ 11. Отправить изменения на внешний репозиторий.===1)git add new.json
+                                                   2)git commit -m "new changes in json-file"
+                                                   3)git push
+                                                   	Enumerating objects: 5, done.
+                                                  	Counting objects: 100% (5/5), done.
+                                                   	Delta compression using up to 4 threads
+                                                   	Compressing objects: 100% (3/3), done.
+                                                   	Writing objects: 100% (3/3), 394 bytes | 394.00 KiB/s, done.
+                                                   	Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+                                                   	To https://github.com/sVladimir-36/JSON.git
+                                                   	a0d7eb9..ed42578  main -> main
+
+ 12. Создать файл preferences.json=== cat preferences.json
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.=== vim preferences.json
+				{
+        			"favorite_movie":"a knight's_tale",
+        			"favorite_series":"game_of_thrones",
+        			"favorite_food":"fried_fish",
+        			"favorite_time_of_the_year":"[spring, summer]",
+        			"the_country_which_i_want_to_visit":"[Croatia, Czech]"
+        			}
+ 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON=== vim skills.json
+{
+        "skills":
+                [
+                        {"basic_theory":
+                                        ["what is testing",
+                                        "bag repors",
+                                        "documentation",
+                                        "testing types",
+                                        "testing methods",
+                                        "testing directions",
+                                        "SDLC",
+                                        "STLC",
+                                        "client-server architecture"
+                                        ]
+                        },
+                        {"HTTP":
+                                        ["request methods",
+                                        "response codes",
+                                        "HTTP request and response structure"
+                                        ]
+                        },
+                        {"JSON": "structure"},
+                        {"XML": "structure"},
+                        {"API testing":
+                                        ["Postman",
+                                        "JS",
+                                        "API autotests"
+                                        ]
+                        },
+                        {"Logs":         ["removing, reading"]},
+                        {"Sniffers":     ["Fiddler, Charles"]},
+                        {"DevTools":     ["Google Chrome, Firefox"]},
+                        {"VPN":          ["what for",
+                                         "how to use",
+                                         "instruments"
+                                        ]
+                        },
+                        {"Mobile testing":
+                                        ["iOs",
+                                        "Android",
+                                        "guidelines",
+                                        "xCode",
+                                        "Androidstudio",
+                                        "ADB",
+                                        "setting VPN and Proxy on mobile devices",
+                                        "mobile traffic sniffing"
+                                        ]
+                        },
+                        {"Linux terminal": ["copying, creating, moving, view"]},
+                        {"SQL":["Create, Delete, Drop, Inser Into, Select, Join, From, Where"]},
+                        {"Postgres": ["installation, using, setting"]},
+                        {"Redis": ["installation, using, setting"]},
+                        {"JMeter":"using"},
+                        {"Python": ["basics, application creation"]}
+
+                ]
+}
+
+ 15. Отправить сразу 2 файла на внешний репозиторий.=== 1) git add .
+							2) git commit -m "adding skills.json and preferences.json"
+							3) git push
+
+ 16. На веб интерфейсе создать файл bug_report.json.=== 		1) в репозитории "JSON" нажать кнопку "Add file"
+									2) в открывшемся списке выбрать вариант "Create new file"
+									3) в открывшейся вкладке в поле "Name your file..." ввести "bug_report.json"
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.=== 4)в нижней части страницы нажать на кнопку "Commit new file"
+ 
+18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.=== 
+	1) в репозитории "JSON" кликнуть мышкой на файл "bug_report.json"
+	2) на открывшейся вкладке нажать на кнопку "Edit this file"  (в виде эмблемы карандаша)
+	3) в открывшемся окне в текстовом поле ввести:
+{
+  "bugreport": 
+            [{"id": "BR-1"},
+             {"header": "the selection of past date is allowed"},
+             {"description": "It is allowed to select a past date for ordering a call to the organization"},
+             {"environment": ["Windows_10_64_bit, Google_Chrome_98.0.4758.102"]},
+             {"severity": "major"},
+             {"priority": "high"},
+             {"steps to reproduce": 
+                                    [{"1": "Open the page..."},
+                                     {"2": "Go to 'Feedback' page"},
+                                     {"3": "Go to the form 'Select the day of the week'"},
+                                     {"4": "In the calendar that opens, select any past date, for example: 11.01.2021"},
+                                     {"5": "In the field 'Phone number' enter the number: '+7-999-999-99-99'"},
+                                     {"6": "In the time selection form, in the 'From' radiobutton, select the value '09'"},
+                                     {"7": "In the 'To' radio button, select the value '16'"},
+                                     {"8": "Click on the 'Call me back' button"}
+                                    ]
+             },
+             {"Actual result": "The page displays the message 'Thank you, we will call you back at the specified time' and the buttons 'Thank you' and 'Change call                                 time'"},
+             {"Expected result": "A notification appears stating that an incorrect date has been selected. 'Call me back' button is not clickable"},
+             {"attachment": "screenshots"},
+             {"assigned to": "manager"}
+            ]
+}
+
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.=== 1) проскроллить страницу вниз до блока "Commit changes"
+									2) в нижней части блока "Commit changes" нажать на зеленую кнопку "Commit changes"
+
+ 20. Синхронизировать внешний и локальный репозиторий JSON === git pull
 
 
 XML
