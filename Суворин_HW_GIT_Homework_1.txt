@@ -208,15 +208,72 @@ JSON
 
  31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML===
 					1)vim skills.xml
-					2)
+					2)<?xml version="1.0" encoding="UTF-8"?>
+					<skills>
+       						 <basic_theory>test documentation, testing types, methods, directions, SDLC, STLC, client-server architecture
+        					 </basic_theory>
+        					 <HTTP>request methods, response codes, HTTP request and response structure</HTTP>
+        					 <JSON>structure</JSON>
+       						 <XML>structure</XML>
+       						 <API_testing>Postman, JS, API autotadting</API_testing>
+       						 <logs>removing, reading</logs>
+       						 <sniffers>fiddler, charles</sniffers>
+       						 <DevTools>Google Chrome, FireFox</DevTools>
+       						 <VPN>what for, how to use, instruments</VPN>
+       						 <mobile_testing>iOS, Android, guidelines, XCode, Android Studio, ADB</mobile_testing>
+       						 <linux_terminal>copying, creating, moving, view</linux_terminal>
+       						 <sql>Create, Delete, Drop, Inser Into, Select, Join, From, Where</sql>
+       						 <postgres>installation, using, setting</postgres>
+       						 <redis>installation, using, setting</redis>
+       						 <jmeter>using</jmeter>
+       						 <python>basics, application creation</python>
+					</skills>
 
- 32. Сделать коммит в одну строку.
- 33. Отправить сразу 2 файла на внешний репозиторий.
- 34. На веб интерфейсе создать файл bug_report.xml.
- 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
- 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 38. Синхронизировать внешний и локальный репозиторий XML
+ 32. Сделать коммит в одну строку.=== 1) git add .
+				      2) git commit -m "added two files at once"
+ 
+ 33. Отправить сразу 2 файла на внешний репозиторий.=== git push
+ 
+ 34. На веб интерфейсе создать файл bug_report.xml.===1) в репозитории "XML" нажать кнопку "Add file"
+						      2) в открывшемся списке выбрать вариант "Create new file"
+						      3) в открывшейся вкладке в поле "Name your file..." ввести "bug_report.xml"
+ 
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.=== в нижней части страницы нажать на кнопку "Commit new file"
+ 
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.===
+                        1) в репозитории "XML" кликнуть мышкой на файл "bug_report.xml"
+	                2) на открывшейся вкладке нажать на кнопку "Edit this file"  (в виде эмблемы карандаша)
+	                3) в открывшемся окне в текстовом поле ввести:
+		<?xml version="1.0" encoding="UTF-8"?>
+		<bug_report>
+          		<id>BR-1</id>
+          		<header>the selection of past date is allowed</header>
+          		<description>It is allowed to select a past date for ordering a call to the organization</description>
+          		<environment>Windows_10_64_bit, Google_Chrome_98.0.4758.102</environment>
+          		<severity>major</severity>
+          		<priority>high</priority>
+          		<steps_to_reproduce>
+                             		<step_1>Open the page </step_1>
+                             		<step_2>Go to 'Feedback' page</step_2>
+                             		<step_3>Go to the form 'Select the day of the week'</step_3>
+                            		<step_4>In the calendar that opens, select any past date, for example: 11.01.2021</step_4>
+                             		<step_5>In the field 'Phone number' enter the number: '+7-999-999-99-99'</step_5>
+                             		<step_6>In the time selection form, in the 'From' radiobutton, select the value '09'</step_6>
+                             		<step_7>In the 'To' radio button, select the value '16'</step_7>
+                             		<step_8>Click on the 'Call me back' button</step_8>
+          		</steps_to_reproduce>
+          		<actual_result>The page displays the message 'Thank you, we will call you back at the specified time' and the buttons 'Thank you' and 'Change 					call time'
+			</actual_result>
+          		<expected_result>A notification appears stating that an incorrect date has been selected. 'Call me back' button is not clickable
+			</expected_result>
+          		<attachment>screenshots</attachment>
+          		<assigned_to>manager</assigned_to>
+		</bug_report>
+ 
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.=== 1) проскроллить страницу вниз до блока "Commit changes"
+									2) в нижней части блока "Commit changes" нажать на зеленую кнопку "Commit changes"
+ 
+ 38. Синхронизировать внешний и локальный репозиторий XML===git pull
 
 TXT
  1. Создать внешний репозиторий c названием TXT.
