@@ -276,21 +276,98 @@ JSON
  38. Синхронизировать внешний и локальный репозиторий XML===git pull
 
 TXT
- 1. Создать внешний репозиторий c названием TXT.
- 2. Клонировать репозиторий TXT на локальный компьютер.
- 3. Внутри локального TXT создать файл “new.txt”.
- 4. Добавить файл под гит.
- 5. Закоммитить файл.
- 6. Отправить файл на внешний GitHub репозиторий.
- 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
- 8. Отправить изменения на внешний репозиторий.
- 9. Создать файл preferences.txt
- 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
- 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
- 12. Сделать коммит в одну строку.
- 13. Отправить сразу 2 файла на внешний репозиторий.
- 14. На веб интерфейсе создать файл bug_report.txt.
- 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
- 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 18. Синхронизировать внешний и локальный репозиторий TXT
+ 1. Создать внешний репозиторий c названием TXT.===1) Во вкладке "Repositories" нажать на кнопку "New" 
+						   2) На открывшейся странице: -ввести название репозитория "TXT", 
+                                                                                  -выбрать "Public", 
+                                                                                  -поставить отметку в чекбоксе "Add a README file"
+						   3) Нажать на кнопку "Create repository"
+ 
+2. Клонировать репозиторий TXT на локальный компьютер.===git clone "https://github.com/sVladimir-36/TXT.git"
+
+ 3. Внутри локального TXT создать файл “new.txt”.===touch new.txt
+
+ 4. Добавить файл под гит.=== git add new.txt
+
+ 5. Закоммитить файл.=== git commit -m "adding another one txt-file"
+
+ 6. Отправить файл на внешний GitHub репозиторий.=== git push
+
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.=== 1)cat > new.txt
+		suvorin vladimir alexandrovich
+		32 years old
+		two pets
+		wished salary= 70000 r
+
+ 8. Отправить изменения на внешний репозиторий.=== 1) git commit -a -m "updating file"
+						   2) git push
+
+ 9. Создать файл preferences.txt=== touch preferences.txt
+
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.===1) cat > preferences.txt
+			   2) favorite movie - a knight's tale
+			      favorite series - game of thrones
+			      favorite food - fried fish
+			      favorite time of the year - spring and summer
+			      the country which i want to visit Croatia and Czech
+
+ 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT=== 
+							1) touch skills.txt
+							2) vim skills.txt
+							skills:
+							basic theory: test documentation, testing types, methods, directions, SDLC, STLC, client-server architecture
+							HTTP: request methods, response codes, HTTP request and response structure
+							JSON:structure
+							XML: structure
+							API testing: Postman, JS, API autotadting
+							logs: removing, reading
+							sniffers: fiddler, charles
+							DevTools: Google Chrome, FireFox
+							VPN: what for, how to use, instruments
+							mobile testing; iOS, Android, guidelines, XCode, Android Studio, ADB
+							linux terminal: copying, creating, moving, view
+							sql: Create, Delete, Drop, Inser Into, Select, Join, From, Where
+							postgres; installation, using, setting
+							reddis: installation, using, setting
+							jmeter: using
+							python: basics, application creation						
+													     
+
+ 12. Сделать коммит в одну строку.=== 1) git add .
+				      2) git commit -m "added two files at once"
+
+ 13. Отправить сразу 2 файла на внешний репозиторий.=== git push
+
+ 14. На веб интерфейсе создать файл bug_report.txt.=== 1) в репозитории "TXT" нажать кнопку "Add file"
+						       2) в открывшемся списке выбрать вариант "Create new file"
+						       3) в открывшейся вкладке в поле "Name your file..." ввести "bug_report.txt"
+
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.=== в нижней части страницы нажать на кнопку "Commit new file"
+
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.=== 
+			1) в репозитории "TXT" кликнуть мышкой на файл "bug_report.txt"
+	                2) на открывшейся вкладке нажать на кнопку "Edit this file"  (в виде эмблемы карандаша)
+	                3) в открывшемся окне в текстовом поле ввести:
+			id:BR-1
+			header:the selection of past date is allowed
+			description: It is allowed to select a past date for ordering a call to the organization
+			environment: Windows 10 64 bit, Google Chrome v.98.0.4758.102
+			severity: major
+			priority: high
+			steps_to_reproduce:
+                  			1.Open the page 
+                 			2.Go to 'Feedback' page
+                  			3.Go to the form 'Select the day of the week'
+                  			4.In the calendar that opens, select any past date, for example: 11.01.2021
+                  			5.In the field 'Phone number' enter the number: '+7-999-999-99-99'
+                  			6.In the time selection form, in the 'From' radiobutton, select the value '09'
+                  			7.In the 'To' radio button, select the value '16'
+                  			8.Click on the 'Call me back' button
+			actual result: The page displays the message 'Thank you, we will call you back at the specified time' and the buttons 'Thank you' and 'Change 					call time'
+			expected result: A notification appears stating that an incorrect date has been selected. 'Call me back' button is not clickable
+			attachment: screenshots
+			assigned to: manager
+
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.=== 1) проскроллить страницу вниз до блока "Commit changes"
+									2) в нижней части блока "Commit changes" нажать на зеленую кнопку "Commit changes"
+
+ 18. Синхронизировать внешний и локальный репозиторий TXT=== git pull
